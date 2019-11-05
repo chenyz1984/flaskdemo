@@ -9,11 +9,11 @@
 from helper import is_isbn_or_key
 from yushu_book import YuShuBook
 from flask import jsonify,Blueprint
-
+from . import web
 #蓝图blueprint
 
 
-web = Blueprint('web',__name__)
+
 # http://127.0.0.1:5000/book/search/9787501524044/1
 @web.route('/book/search/<q>/<page>')
 def search(q, page):
