@@ -3,16 +3,14 @@
  # Author: ChenYingzi
  # Date: 2019-11-05 21:34:21
  # LastEditors: ChenYingzi
- # LastEditTime: 2019-11-05 22:26:06
+ # LastEditTime: 2019-11-06 20:07:14
  # Description: 文件描述
 '''
+
 from helper import is_isbn_or_key
 from yushu_book import YuShuBook
-from flask import jsonify,Blueprint
+from flask import jsonify
 from . import web
-#蓝图blueprint
-
-
 
 # http://127.0.0.1:5000/book/search/9787501524044/1
 @web.route('/book/search/<q>/<page>')
