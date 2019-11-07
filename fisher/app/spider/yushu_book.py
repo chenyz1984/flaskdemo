@@ -1,17 +1,18 @@
 # -*- coding:utf-8 -*-
 '''
- # Author: ChenYingzi
- # Date: 2019-11-05 20:49:16
- # LastEditors: ChenYingzi
- # LastEditTime: 2019-11-06 23:00:04
- # Description: 文件描述
+ # @Author: ChenYingzi
+ # @Date: 2019-11-06 09:03:28
+ # @LastEditors: ChenYingzi
+ # @LastEditTime: 2019-11-07 14:02:54
+ # @Description: 文件描述
 '''
 
-from httpfisher import HTTP
+from app.libs.httper import HTTP
 from flask import current_app
 
 class YuShuBook:
-    
+    # 模型层 MVC结构的的M层
+
     isbn_url = 'http://t.yushu.im/v2/book/isbn/{}'
     keyword_url = 'http://t.yushu.im/v2/book/search?q={}&count={}&start={}'
     @classmethod

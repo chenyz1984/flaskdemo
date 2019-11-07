@@ -1,14 +1,15 @@
 # -*- coding:utf-8 -*-
 '''
- # Author: ChenYingzi
- # Date: 2019-11-05 21:34:21
- # LastEditors: ChenYingzi
- # LastEditTime: 2019-11-06 20:07:14
- # Description: 文件描述
+ # @Author      : ChenYingzi
+ # @Date        : 2019-11-06 09:03:28
+ # @LastEditors : ChenYingzi
+ # @LastEditTime: 2019-11-07 11:38:19
+ # @Description : 文件描述
+ # @FilePath    : /flaskdemo/fisher/app/web/book.py
 '''
 
-from helper import is_isbn_or_key
-from yushu_book import YuShuBook
+from app.libs.helper import is_isbn_or_key
+from app.spider.yushu_book import YuShuBook
 from flask import jsonify
 from flask import request
 from . import web
@@ -20,10 +21,6 @@ def search():
     '''q page
         ?q=金庸&page=1
     '''
-    # isbn isbn13 13个0-9纯数字
-    # isbn10 10个0-9数字组成，含有‘-’
-    # q = request.args['q']
-    # page = request.args['page']
     form = SearchForm(request.args)
     if form.validate():
         q = form.q.data.strip()
